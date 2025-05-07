@@ -43,7 +43,7 @@
       macroPreview.classList.add('hidden');
       addBtn.disabled = true;
       try {
-        const res = await fetch('https://your-proxy-name.onrender.com/api/nutrition', {
+        const res = await fetch('https://calorie-tracker-backend-8yr7.onrender.com/api/nutrition', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ query: desc })
