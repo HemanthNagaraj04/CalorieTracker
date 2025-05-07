@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Calorie Tracker</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:400,600,700&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Calorie Tracker</h1>
+  <form id="food-form" autocomplete="off">
+    <label for="food-name">Food Name</label>
+    <input type="text" id="food-name" required placeholder="e.g. 1 large apple" maxlength="100" />
+    <label for="quantity">Quantity (servings)</label>
+    <input type="number" id="quantity" min="0.1" step="0.1" value="1" required />
+    <div id="loading">Fetching macros...</div>
+    <div id="macro-preview" class="macro-preview hidden"></div>
+    <button type="submit" id="add-btn" disabled>Add Food</button>
+  </form>
+
+  <div class="food-list" id="food-list"></div>
+  <div class="total-calories" id="total-calories">Total Calories: 0 kcal | Protein: 0g | Fat: 0g | Carbs: 0g</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+*, *::before, *::after { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 10px 15px;
+    max-width: 350px;
+    margin-inline: auto;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  form, .food-list {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 9px #ddd;
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    margin: 10px 0 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1.5px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px #85c1e9;
+    outline: none;
+  }
+  button {
+    margin-top: 15px;
+    width: 100%;
+    background: #3498db;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover { background: #2980b9; }
+  .food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+  }
+  .food-info { flex-grow: 1; }
+  .food-name { font-weight: 600; color: #34495e; }
+  .food-details, .macro-details {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 3px;
+  }
+  .macro-details {
+    color: #3498db;
+    font-weight: 600;
+    min-width: 100px;
+    text-align: right;
+  }
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #bdc3c7;
+    font-size: 1.3rem;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    transition: color 0.25s ease;
+  }
+  .delete-btn:hover { color: #e74c3c; }
+  .total-calories {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: #27ae60;
+  }
+  .macro-preview {
+    background: #f0f5f9;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    box-shadow: inset 0 0 6px #ccc;
+  }
+  .macro-preview.hidden { display: none; }
+  #loading {
+    font-size: 0.9rem;
+    color: #3498db;
+    margin-top: 8px;
+    display: none;
+  }
+  @media screen and (max-width: 360px) {
+    body { padding: 10px 8px; max-width: 100vw; }
+    button { font-size: 1rem; }
+  }
